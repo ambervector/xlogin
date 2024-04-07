@@ -9,7 +9,7 @@ function Form({ handleIsLoggedIn, isLoggedIn }) {
 
   const handleOnClick = (e) => {
     if (
-      inpUsernameRef.current.value === "username" &&
+      inpUsernameRef.current.value === "user" &&
       inpPasswordRef.current.value === "password"
     ) {
       e.preventDefault();
