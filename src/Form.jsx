@@ -7,11 +7,13 @@ function Form({ handleIsLoggedIn, isLoggedIn }) {
   const inpPasswordRef = useRef();
   console.log(isLoggedIn);
 
-  const handleOnClick = () => {
+  const handleOnClick = (e) => {
     if (
       inpUsernameRef.current.value === "username" &&
       inpPasswordRef.current.value === "password"
     ) {
+      e.preventDefault();
+
       handleIsLoggedIn(true);
     } else if (
       inpUsernameRef.current.value === "" &&
@@ -20,6 +22,8 @@ function Form({ handleIsLoggedIn, isLoggedIn }) {
       handleIsLoggedIn(false);
       return;
     } else {
+      e.preventDefault();
+
       setHasError(true);
     }
   };
