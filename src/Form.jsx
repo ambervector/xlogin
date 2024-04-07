@@ -26,21 +26,28 @@ function Form({ handleIsLoggedIn, isLoggedIn }) {
 
   return (
     <>
-      {hasError && <p>Invalid username or password </p>}
-      <label htmlFor="username">Username:</label>
-      <input ref={inpUsernameRef} type="user" placeholder="username" required />
-      <br />
-      <label htmlFor="password">Password:</label>
-      <input
-        ref={inpPasswordRef}
-        type="password"
-        placeholder="password"
-        required
-      />
-      <br />
-      <button onClick={handleOnClick} type="submit">
-        Submit
-      </button>
+      <form action="">
+        {hasError && <p>Invalid username or password </p>}
+        <label htmlFor="username">Username:</label>
+        <input
+          ref={inpUsernameRef}
+          type="user"
+          placeholder="username"
+          required
+        />
+        <br />
+        <label htmlFor="password">Password:</label>
+        <input
+          ref={inpPasswordRef}
+          type="password"
+          placeholder="password"
+          required
+        />
+        <br />
+        <button type="submit" onClick={handleOnClick}>
+          Submit
+        </button>
+      </form>
     </>
   );
 }
