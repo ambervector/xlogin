@@ -22,10 +22,15 @@ function Form({ handleIsLoggedIn, isLoggedIn }) {
     <>
       {hasError && <p>Invalid username or password </p>}
       <label htmlFor="username">Username:</label>
-      <input ref={inpUsernameRef} type="text" placeholder="username" required />
+      <input ref={inpUsernameRef} type="user" placeholder="username" required />
       <br />
       <label htmlFor="password">Password:</label>
-      <input ref={inpPasswordRef} type="text" placeholder="password" required />
+      <input
+        ref={inpPasswordRef}
+        type="password"
+        placeholder="password"
+        required
+      />
       <br />
       <button onClick={handleOnClick} type="submit">
         Submit
