@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Form from "./Form";
-import Welcome from "./Welcome";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState();
@@ -11,7 +10,7 @@ function App() {
     <>
       <h1>Login Page</h1>
       {isLoggedIn ? (
-        <Welcome />
+        <p>Welcome, user</p>
       ) : (
         <Form handleIsLoggedIn={handleIsLoggedIn} isLoggedIn={isLoggedIn} />
       )}
