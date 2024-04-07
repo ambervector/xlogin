@@ -13,6 +13,12 @@ function Form({ handleIsLoggedIn, isLoggedIn }) {
       inpPasswordRef.current.value === "password"
     ) {
       handleIsLoggedIn(true);
+    } else if (
+      inpUsernameRef.current.value === "" &&
+      inpPasswordRef.current.value === ""
+    ) {
+      handleIsLoggedIn(false);
+      return;
     } else {
       setHasError(true);
     }
